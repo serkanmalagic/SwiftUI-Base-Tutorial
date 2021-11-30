@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RedViewOne: View {
-
+    
     var body: some View {
         
         NavigationView{
@@ -23,9 +23,9 @@ struct RedViewOne: View {
                         Text("Sonraki Sayfa")
                             .bold()
                             .frame(width: 280, height: 50)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                         
                     }
                 })
@@ -51,9 +51,9 @@ struct BlueViewTwo: View {
                     Text("Sonraki Sayfa")
                         .bold()
                         .frame(width: 280, height: 50)
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                     
                 }
             })
@@ -67,6 +67,8 @@ struct GreenViewThree: View {
     var color : Color
     var number : Int
     
+    @State private var showingSheet = false
+    
     var body: some View {
         VStack{
             CircleView(color: color, number: number)
@@ -75,9 +77,24 @@ struct GreenViewThree: View {
             
             Button("Dismiss VC"){
                 dismiss()
-            }
+            }.padding()
+            
+            Button("Modal göster"){
+                showingSheet.toggle()
+            }.sheet(isPresented: $showingSheet) {
+                SheetView()
+            }.padding()
             
         }
+    }
+}
+
+struct SheetView : View {
+    
+    var body: some View {
+        Text("Sheet VC")
+            .bold()
+            .font(.headline)
     }
 }
 
@@ -147,14 +164,14 @@ struct LoginView : View {
                 .myButtonStyle()
             }
         }.padding()
-         .frame(
-             minWidth: 0,
-             maxWidth: UIScreen.screenWidth * 0.9,
-             alignment: .topLeading
-         )
-         .background(.white)
-         .cornerRadius(25)
-         .shadow(color: .purple, radius: 8, x: 1, y: 1)
+            .frame(
+                minWidth: 0,
+                maxWidth: UIScreen.screenWidth * 0.9,
+                alignment: .topLeading
+            )
+            .background(.white)
+            .cornerRadius(25)
+            .shadow(color: .purple, radius: 8, x: 1, y: 1)
     }
     
 }
