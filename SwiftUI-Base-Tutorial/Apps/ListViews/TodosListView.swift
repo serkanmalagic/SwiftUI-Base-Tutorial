@@ -18,6 +18,9 @@ struct TodosListView: View {
                 List(viewModel.items, id : \.id){ item in
                     TodosListCell(imageUrl: "img", title: item.title, description: item.title)
                 }
+                .refreshable {
+                    print("Do your refresh work here")
+                }
                 
             }.onAppear (perform:{
                 viewModel.loadData()

@@ -21,6 +21,7 @@
 		FD08093227569DF500B845F2 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08092E27569DF500B845F2 /* LoremSwiftum.swift */; };
 		FD08093327569DF500B845F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08092F27569DF500B845F2 /* Constants.swift */; };
 		FD08093C27569E0700B845F2 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08093927569E0700B845F2 /* TodoViewModel.swift */; };
+		FD2F5396275946560018B076 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F5395275946560018B076 /* LoadingView.swift */; };
 		FD66B4E427550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD66B4E327550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift */; };
 		FD66B4E627550F7A0025D94D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD66B4E527550F7A0025D94D /* ContentView.swift */; };
 		FD66B4E827550F7C0025D94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD66B4E727550F7C0025D94D /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		FD08092E27569DF500B845F2 /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		FD08092F27569DF500B845F2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD08093927569E0700B845F2 /* TodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		FD2F5395275946560018B076 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FD66B4E027550F7A0025D94D /* SwiftUI-Base-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Base-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD66B4E327550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Base_TutorialApp.swift; sourceTree = "<group>"; };
 		FD66B4E527550F7A0025D94D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FD2F5393275946300018B076 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F5394275946460018B076 /* LoadingIndicatorView */,
+				FD08091A2756965B00B845F2 /* ListViews */,
+				FD080917275691EF00B845F2 /* FormView */,
+				FD080914275691AB00B845F2 /* LoginView */,
+				FD08090B2756912600B845F2 /* NavigationViews */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		FD2F5394275946460018B076 /* LoadingIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				FD2F5395275946560018B076 /* LoadingView.swift */,
+			);
+			path = LoadingIndicatorView;
+			sourceTree = "<group>";
+		};
 		FD66B4D727550F7A0025D94D = {
 			isa = PBXGroup;
 			children = (
@@ -153,14 +175,11 @@
 			children = (
 				FD66B4E327550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift */,
 				FDC417002755663300007468 /* Extension.swift */,
+				FD2F5393275946300018B076 /* Apps */,
 				FD08093627569DFC00B845F2 /* ViewModel */,
 				FD08092D27569DE200B845F2 /* Resources */,
 				FD08092427569DD400B845F2 /* Model */,
 				FD08091F27569D9300B845F2 /* Network */,
-				FD08091A2756965B00B845F2 /* ListViews */,
-				FD080917275691EF00B845F2 /* FormView */,
-				FD080914275691AB00B845F2 /* LoginView */,
-				FD08090B2756912600B845F2 /* NavigationViews */,
 				FD66B4E527550F7A0025D94D /* ContentView.swift */,
 				FD66B4E727550F7C0025D94D /* Assets.xcassets */,
 				FD66B4E927550F7C0025D94D /* Preview Content */,
@@ -263,6 +282,7 @@
 				FD08093C27569E0700B845F2 /* TodoViewModel.swift in Sources */,
 				FD08093227569DF500B845F2 /* LoremSwiftum.swift in Sources */,
 				FD08093327569DF500B845F2 /* Constants.swift in Sources */,
+				FD2F5396275946560018B076 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,7 +34,7 @@ struct TodosListCell: View {
         .padding()
         .frame(width: UIScreen.screenWidth * 0.85, height: UIScreen.screenHeight * 0.15)
         .background(Color.red)
-        .cornerRadius(25)
+        .cornerRadius(15)
         .shadow(color: .gray, radius: 5, x: 2, y: 2)
 
     }
