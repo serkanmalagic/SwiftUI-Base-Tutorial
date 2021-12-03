@@ -18,30 +18,18 @@ class TodoViewModel: ObservableObject {
     func loadData(){
         
         isLoading = true
-        
-        guard let url = URL(string : getUrl) else { return }
-        
-        URLSession.shared.dataTask(with: url) { ( data , res , err )  in
-            do {
-                
-                if let data = data {
-                    
-                    let result = try JSONDecoder().decode([Todo].self   , from: data)
-                    
-                    DispatchQueue.main.async {
-                        self.items = result
-                        self.isLoading = false
-                    }
-                    
-                }else {
-                    print("No data")
-                }
-                
-            }catch ( let error ) {
-                print(error.localizedDescription)
+
+        NetworkClient.performRequest( object: [Todo].self, router: APIRouter.getTodos) { response in
+            
+            DispatchQueue.main.async {
+                self.items = response
+                self.isLoading = false
             }
+            
+        } failure: { error in
+            print(error.localizedDescription)
         }
-        .resume()
+        
     }
     
 }

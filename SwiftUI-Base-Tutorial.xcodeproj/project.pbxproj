@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F859BA4BAA80F04D1A762ACA /* Pods_SwiftUI_Base_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C311939061AAD20A106FA4F /* Pods_SwiftUI_Base_Tutorial.framework */; };
 		FD08090D2756914100B845F2 /* RedViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08090C2756914100B845F2 /* RedViewOne.swift */; };
 		FD0809112756915C00B845F2 /* BlueViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0809102756915C00B845F2 /* BlueViewTwo.swift */; };
 		FD0809132756916400B845F2 /* GreenViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0809122756916400B845F2 /* GreenViewThree.swift */; };
@@ -22,6 +23,8 @@
 		FD08093327569DF500B845F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08092F27569DF500B845F2 /* Constants.swift */; };
 		FD08093C27569E0700B845F2 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08093927569E0700B845F2 /* TodoViewModel.swift */; };
 		FD2F5396275946560018B076 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2F5395275946560018B076 /* LoadingView.swift */; };
+		FD5BE626275AC8FC006EE777 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5BE624275AC8FB006EE777 /* NetworkClient.swift */; };
+		FD5BE627275AC8FC006EE777 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5BE625275AC8FC006EE777 /* ApiRouter.swift */; };
 		FD66B4E427550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD66B4E327550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift */; };
 		FD66B4E827550F7C0025D94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD66B4E727550F7C0025D94D /* Assets.xcassets */; };
 		FD66B4EB27550F7C0025D94D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD66B4EA27550F7C0025D94D /* Preview Assets.xcassets */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C311939061AAD20A106FA4F /* Pods_SwiftUI_Base_Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Base_Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73094CE859A1EF40C143C46C /* Pods-SwiftUI-Base-Tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Base-Tutorial.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Base-Tutorial/Pods-SwiftUI-Base-Tutorial.release.xcconfig"; sourceTree = "<group>"; };
+		7636FD56BA219BA745F022FB /* Pods-SwiftUI-Base-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Base-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Base-Tutorial/Pods-SwiftUI-Base-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		FD08090C2756914100B845F2 /* RedViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewOne.swift; sourceTree = "<group>"; };
 		FD0809102756915C00B845F2 /* BlueViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewTwo.swift; sourceTree = "<group>"; };
 		FD0809122756916400B845F2 /* GreenViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewThree.swift; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		FD08092F27569DF500B845F2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD08093927569E0700B845F2 /* TodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		FD2F5395275946560018B076 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FD5BE624275AC8FB006EE777 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		FD5BE625275AC8FC006EE777 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		FD66B4E027550F7A0025D94D /* SwiftUI-Base-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Base-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD66B4E327550F7A0025D94D /* SwiftUI_Base_TutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Base_TutorialApp.swift; sourceTree = "<group>"; };
 		FD66B4E727550F7C0025D94D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,12 +66,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F859BA4BAA80F04D1A762ACA /* Pods_SwiftUI_Base_Tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0A017EE045948EF0407FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C311939061AAD20A106FA4F /* Pods_SwiftUI_Base_Tutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B35F8627B7A24C52F48CF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7636FD56BA219BA745F022FB /* Pods-SwiftUI-Base-Tutorial.debug.xcconfig */,
+				73094CE859A1EF40C143C46C /* Pods-SwiftUI-Base-Tutorial.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD08090B2756912600B845F2 /* NavigationViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +128,8 @@
 		FD08091F27569D9300B845F2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FD5BE625275AC8FC006EE777 /* ApiRouter.swift */,
+				FD5BE624275AC8FB006EE777 /* NetworkClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,6 +188,8 @@
 			children = (
 				FD66B4E227550F7A0025D94D /* SwiftUI-Base-Tutorial */,
 				FD66B4E127550F7A0025D94D /* Products */,
+				81B35F8627B7A24C52F48CF6 /* Pods */,
+				1D0A017EE045948EF0407FDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD66B4EE27550F7C0025D94D /* Build configuration list for PBXNativeTarget "SwiftUI-Base-Tutorial" */;
 			buildPhases = (
+				4929F52DAF4C7823E2D8F8C7 /* [CP] Check Pods Manifest.lock */,
 				FD66B4DC27550F7A0025D94D /* Sources */,
 				FD66B4DD27550F7A0025D94D /* Frameworks */,
 				FD66B4DE27550F7A0025D94D /* Resources */,
+				E4FD6B5FD4BB08289C73B657 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,11 +292,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4929F52DAF4C7823E2D8F8C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUI-Base-Tutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4FD6B5FD4BB08289C73B657 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Base-Tutorial/Pods-SwiftUI-Base-Tutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Base-Tutorial/Pods-SwiftUI-Base-Tutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Base-Tutorial/Pods-SwiftUI-Base-Tutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD66B4DC27550F7A0025D94D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5BE626275AC8FC006EE777 /* NetworkClient.swift in Sources */,
 				FD080919275691F900B845F2 /* FormView.swift in Sources */,
 				FD08092C27569DDC00B845F2 /* TodoModel.swift in Sources */,
 				FDC417012755663300007468 /* Extension.swift in Sources */,
@@ -281,6 +356,7 @@
 				FD08091E2756967900B845F2 /* TodosListCell.swift in Sources */,
 				FD08093C27569E0700B845F2 /* TodoViewModel.swift in Sources */,
 				FD08093227569DF500B845F2 /* LoremSwiftum.swift in Sources */,
+				FD5BE627275AC8FC006EE777 /* ApiRouter.swift in Sources */,
 				FD08093327569DF500B845F2 /* Constants.swift in Sources */,
 				FD2F5396275946560018B076 /* LoadingView.swift in Sources */,
 			);
@@ -407,6 +483,7 @@
 		};
 		FD66B4EF27550F7C0025D94D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7636FD56BA219BA745F022FB /* Pods-SwiftUI-Base-Tutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +514,7 @@
 		};
 		FD66B4F027550F7C0025D94D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73094CE859A1EF40C143C46C /* Pods-SwiftUI-Base-Tutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

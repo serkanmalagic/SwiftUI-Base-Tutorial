@@ -6,7 +6,8 @@ target 'SwiftUI-Base-Tutorial' do
   use_frameworks!
 
   # Pods for SwiftUI-Base-Tutorial
-  pod 'NavigationStack'
+  pod 'Alamofire', '~> 5.4'
+
 
 
 end

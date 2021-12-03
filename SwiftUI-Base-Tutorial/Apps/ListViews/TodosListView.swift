@@ -26,7 +26,9 @@ struct TodosListView: View {
                     }
                     
                 }.onAppear (perform:{
-                    viewModel.loadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.viewModel.loadData()
+                    }
                 })
                 
                 if viewModel.isLoading {
