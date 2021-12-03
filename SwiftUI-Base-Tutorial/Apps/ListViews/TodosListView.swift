@@ -33,13 +33,18 @@ struct TodosListView: View {
                     IndicatorView()
                 }
             }
-            
-            
             .background(.green)
-                
-            .navigationTitle(Text("HeadLine"))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("ford")
+                        .resizable()
+                        .aspectRatio(2, contentMode: .fill)
+                        .frame(width: 100, height: 20)
+                }
+            }
+
         }
-        
     }
 }
 

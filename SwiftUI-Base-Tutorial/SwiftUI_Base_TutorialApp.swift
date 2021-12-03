@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUI_Base_TutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            TodosListView()
+            ContentView()
+                .environment(\.colorScheme, .light)
         }
     }
 }

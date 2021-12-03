@@ -15,24 +15,33 @@ struct LoginView : View {
     var body: some View {
         
         VStack{
+            
             Image("img")
+            
             Text("SwiftUI Hoşgeldin")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding()
+                .multilineTextAlignment(.center)
+            
             VStack(alignment: .leading){
+                
                 Text("Kullanıcı Adın")
+                
                 HStack{
                     TextField("@example", text: $user)
                     Image("check")
                 }
+                
                 Divider()
                 
                 Text("Şifre")
+                
                 HStack{
                     SecureField("**********", text: $user)
                     Image("check")
                 }
+                
                 Divider()
                 
                 Button { } label: {
@@ -43,7 +52,6 @@ struct LoginView : View {
                         .colorInvert()
                 }
                 .myButtonStyle()
-                
                 // to use
                 Button { } label: {
                     Text("Kayıt Ol")
@@ -54,6 +62,8 @@ struct LoginView : View {
                 }
                 .myButtonStyle()
             }
+            .padding()
+            
         }.padding()
             .frame(
                 minWidth: 0,
@@ -61,8 +71,8 @@ struct LoginView : View {
                 alignment: .topLeading
             )
             .background(.white)
-            .cornerRadius(25)
-            .shadow(color: .purple, radius: 8, x: 1, y: 1)
+            .cornerRadius(15)
+            .shadow(color: .gray, radius: 8, x: 0.1, y: 0.1)
     }
     
 }

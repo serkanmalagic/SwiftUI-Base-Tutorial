@@ -34,3 +34,31 @@ struct RedViewOne: View {
         .accentColor(Color(.label))
     }
 }
+
+
+struct SheetView : View {
+    
+    var body: some View {
+        Text("Sheet VC")
+            .bold()
+            .font(.headline)
+    }
+}
+
+//  İçerisine veri gönderilen ve diğer sayfalardan kolayca çağırılabilen item'dir.
+struct CircleView: View {
+    
+    var color : Color
+    var number : Int
+    
+    var body: some View {
+        ZStack{
+            Circle()
+                .foregroundColor(color)
+                .frame(width: 200, height: 200, alignment: .center)
+            Text("\(number)")
+                .foregroundColor(.white)
+                .font(.system(size : 70, weight: .bold))
+        }
+    }
+}

@@ -31,8 +31,6 @@ struct LoadingView: View {
                     .foregroundColor(.black)
                     .padding()
                 
-                
-                
                 Button("Trigger indicator again"){
                     runSomething()
                 }.buttonStyle(GrowingButton())
@@ -45,8 +43,6 @@ struct LoadingView: View {
                 IndicatorView()
             }
         }
-        
-        
         
     }
     

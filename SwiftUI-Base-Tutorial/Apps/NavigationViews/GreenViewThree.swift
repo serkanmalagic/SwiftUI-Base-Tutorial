@@ -10,6 +10,7 @@ import SwiftUI
 struct GreenViewThree: View {
     
     @Environment(\.dismiss) var dismiss
+    
     var color : Color
     var number : Int
     
