@@ -12,22 +12,32 @@ struct TodosListView: View {
     @ObservedObject var viewModel = TodoViewModel()
     
     var body: some View {
-      
+        
         NavigationView{
-            VStack {
-                List(viewModel.items, id : \.id){ item in
-                    TodosListCell(imageUrl: "img", title: item.title, description: item.title)
-                }
-                .refreshable {
-                    print("Do your refresh work here")
-                }
+            
+            ZStack{
                 
-            }.onAppear (perform:{
-                viewModel.loadData()
-            })
-                .background(.green)
+                VStack {
+                    List(viewModel.items, id : \.id){ item in
+                        TodosListCell(imageUrl: "img", title: item.title, description: item.title)
+                    }
+                    .refreshable {
+                        print("Do your refresh work here")
+                    }
+                    
+                }.onAppear (perform:{
+                    viewModel.loadData()
+                })
                 
-                .navigationTitle(Text("HeadLine"))
+                if viewModel.isLoading {
+                    IndicatorView()
+                }
+            }
+            
+            
+            .background(.green)
+                
+            .navigationTitle(Text("HeadLine"))
         }
         
     }

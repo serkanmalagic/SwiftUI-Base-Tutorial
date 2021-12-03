@@ -13,8 +13,12 @@ let postUrl = "https://jsonplaceholder.typicode.com/posts"
 class TodoViewModel: ObservableObject {
     
     @Published var items = [Todo]()
+    @Published var isLoading = false
     
     func loadData(){
+        
+        isLoading = true
+        
         guard let url = URL(string : getUrl) else { return }
         
         URLSession.shared.dataTask(with: url) { ( data , res , err )  in
@@ -26,6 +30,7 @@ class TodoViewModel: ObservableObject {
                     
                     DispatchQueue.main.async {
                         self.items = result
+                        self.isLoading = false
                     }
                     
                 }else {

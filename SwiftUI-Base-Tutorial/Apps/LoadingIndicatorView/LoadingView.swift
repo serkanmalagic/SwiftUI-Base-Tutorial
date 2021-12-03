@@ -12,36 +12,41 @@ struct LoadingView: View {
     @State private var isLoading = true
     
     var body: some View {
-       
-        VStack{
+        
+        ZStack{
             
-            Image("batman")
-                .resizable()
-                .aspectRatio(1, contentMode: .fit)
-                .frame(width: UIScreen.screenWidth * 0.8 , height: UIScreen.screenHeight * 0.4)
-                .background(.red)
-                .cornerRadius(25)
-                .shadow(color: .gray, radius: 15, x: 2, y: 2)
-                        
-            Text("Loading indicator will be presenting for 2 sec")
-                .bold()
-                .font(.title)
-                .foregroundColor(.black)
-                .padding()
-            
-            ZStack{
-                if isLoading {
-                    IndicatorView()
-                }
+            VStack{
+                
+                Image("batman")
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(width: UIScreen.screenWidth * 0.8 , height: UIScreen.screenHeight * 0.4)
+                    .background(.red)
+                    .cornerRadius(25)
+                    .shadow(color: .gray, radius: 15, x: 2, y: 2)
+                
+                Text("Loading indicator will be presenting for 2 sec")
+                    .bold()
+                    .font(.title)
+                    .foregroundColor(.black)
+                    .padding()
+                
+                
+                
+                Button("Trigger indicator again"){
+                    runSomething()
+                }.buttonStyle(GrowingButton())
+                
+            }.onAppear{
+                runSomething()
             }
             
-            Button("Trigger indicator again"){
-                runSomething()
-            }.buttonStyle(GrowingButton())
-            
-        }.onAppear{
-            runSomething()
+            if isLoading {
+                IndicatorView()
+            }
         }
+        
+        
         
     }
     
@@ -55,12 +60,6 @@ struct LoadingView: View {
             }
         }
         
-    }
-}
-
-struct LoadingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadingView()
     }
 }
 
